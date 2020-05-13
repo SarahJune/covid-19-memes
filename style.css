@@ -55,6 +55,8 @@ a:hover {
 }
 iframe {
   width: 100%;
+}
+.three-fourths iframe {
   min-height: 700px;
 }
 .allmemes {
@@ -106,7 +108,7 @@ button a {
   .half-width {
     width: 75%;
   }
-  iframe {
+  .three-fourths iframe {
     min-height: 500px;
   }
   h1 {
@@ -121,7 +123,7 @@ button a {
   .three-fourths {
     width: 100%;
   }
-  iframe {
+  .three-fourths iframe {
     min-height: 400px;
   }
 }
