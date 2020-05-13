@@ -24,18 +24,13 @@ header a {
   text-decoration: none;
 }
 main {
-  align-self: center;
   margin: auto;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  display: flex;
   width: 100%;
   margin: auto;
   max-width: 1200px;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Bai Jamjuree', sans-serif;
   margin: 20px 0;
 }
 h1 {
@@ -58,19 +53,28 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.memes h2 {
-  font-family: 'Quicksand', sans-serif;
+iframe {
+  width: 100%;
+  min-height: 700px;
+}
+.allmemes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.allmemes h2 {
+  font-family: 'Bai Jamjuree', sans-serif;
   line-height: 1.3em;
   margin: 0;
   font-size: 32px;
   margin-bottom: 5px;
 }
-.memes h3 {
-  font-family: 'Quicksand', sans-serif;
+.allmemes h3 {
+  font-family: 'Bai Jamjuree', sans-serif;
   line-height: 1.5em;
   margin: 0;
 }
-.memes p, button {
+.allmemes p, button {
   font-size: 16px;
   line-height: 1.5em;
   font-family: 'Lato', sans-serif;
@@ -88,8 +92,36 @@ button a {
 }
 .meme {
   box-sizing: border-box;
-  width: 100%;
   padding: 50px;
-  clear: left;
-  border-bottom: 1px solid lightgray;
+  margin: auto;
+}
+.half-width {
+  width: 50%;
+}
+.three-fourths {
+  width: 75%;
+  max-width: 700px;
+}
+@media screen and (max-width: 900px) {
+  .half-width {
+    width: 75%;
+  }
+  iframe {
+    min-height: 500px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .half-width {
+    width: 100%;
+  }
+  .three-fourths {
+    width: 100%;
+  }
+  iframe {
+    min-height: 400px;
+  }
 }
