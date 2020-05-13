@@ -1,0 +1,234 @@
+@import 'normalize.css';
+@import 'rotate.css';
+@import 'store.css';
+
+html {
+  background-size: cover;
+  box-sizing: border-box;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+body {
+  border-left: 20px solid #fff;
+  border-right: 20px solid #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  -webkit-font-smoothing: antialiased;
+}
+body:before, body:after {
+  content: "";
+  position: fixed;
+  background: #fff;
+  left: 0;
+  right: 0;
+  height: 20px;
+  align-content: space-between;
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+header {
+  box-sizing: border-box;
+  padding: 15px 0;
+  position: fixed;
+}
+header a {
+  color: black;
+  text-decoration: none;
+}
+main {
+  align-self: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Major Mono Display', monospace;
+  margin: 20px 0;
+}
+h1 {
+  text-align: center;
+  font-size: 72px;
+}
+p {
+  font-family: monospace;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+a {
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.media {
+  margin: 50px 0;
+    width: 700px;
+    height: 394px;
+}
+.home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.6)), url("img/mountains-1.jpg") top center no-repeat;
+  background-size: cover;
+}
+.line {
+  border: 2px solid #4cbb17;
+  width: 40px;
+  margin: auto;
+  border-radius: 4px;
+  margin: 10px auto;
+}
+.enter {
+  text-align: left;
+  align-items: start;
+  width: 100%;
+}
+.enter a {
+  color: #000000;
+  color: rgba(0, 0, 0, 0);
+  padding: 50px;
+}
+.index {
+  text-align: center;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 150px 25px;
+  width: 100%;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.grid .accordion {
+  width: 90%;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 25px;
+  transition: all .5s ease;
+  align-self: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 75px;
+  font-family: 'Major Mono Display', monospace;
+  display: block;
+  font-size: 21px;
+}
+.grid .accordion:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.back-button {
+  background: white;
+  cursor: pointer;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 50px auto;
+  display: inline-block;
+  text-align: center;
+  justify-content: space-around;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
+}
+.back-button:hover {
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0);
+}
+.back-button a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: block;
+}
+.questions {
+  max-width: 650px;
+  font-family: monospace;
+  text-align: left;
+  font-size: 1rem;
+  margin: auto;
+}
+.questions li {
+  margin: 16px 0;
+  line-height: 1.6;
+}
+.quote {
+  margin: 25px auto 0 auto;
+  max-width: 300px;
+}
+.quote p {
+  margin: 0;
+  font-family: monospace;
+}
+.attribution {
+  font-size: 1rem;
+  padding: 15px;
+}
+p.accordion {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom:10px;
+}
+div.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+  margin-bottom:10px;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 10000px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+
+@media screen and (max-width: 800px) {
+  .media {
+    width: 560px;
+    height: 315px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .media {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .media {
+    width: 300px;
+    height: 169px;
+  }
+}
